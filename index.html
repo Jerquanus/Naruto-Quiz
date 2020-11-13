@@ -7,27 +7,54 @@
   </head>
   
   <body>
+
+    <!-- view scores button -->
+    <div class="scorebtn">
+      <button>view score</button>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer">
+      <h2>time limit:</h2>
+    </div>
+  
+    
       <!-- wrapper -->
     <div class="container"> 
 
-      <!-- Intro picture -->
-      <div id="Naruto">
-        <img src="./assets/images/NarutoUzumaki.png"/>
-      </div>
 
-      <!-- Home screen -->
-      <div id="home">
+      <div id= "question-container">
+        <!-- Intro picture -->
+        <div id="naruto" >
+          <img src="./assets/images/NarutoUzumaki.png"naruto/>
+        </div>
 
-        <h1> Can you be the next Kage? Test your knowledge - follow your ninja way and click play!!</h1>
+        <!-- 'asking all those questions..assuming' ask them questions -->
+        <div id= "question" class= "ask hide">
+          Could you be the next Kage? Test your knowledge - follow your ninja way, <span>click play!!</span>
+        </div>
 
-        <a href="/viewscore.html" class="btn" id="viewscorebtn">view score</a>
+        <!-- 'u ain't got the answers sway' give them answer choices and create a grid to hold them-->
+        <div id= "answers" class= "btn-grid hide">
 
-        <a href="/game.html" class="btn">Play Now</a>
+          <button class="btn"> choice 1</button>
+          <button class="btn"> choice 2</button>
+          <button class="btn"> choice 3</button>
+          <button class="btn"> choice 4</button>
 
+        </div>
+
+        <div class="controls">
+            
+          <button id="playbtn" class="playbtn start-time btn button">Play!</button>
+          <button id="nextbtn" class="nextbtn button btn hide">Next</button>
           
+        </div>
 
       </div>
 
+        
+      
       
 
 

@@ -1,7 +1,109 @@
-:root {
-    background-color: rgb(29, 26, 26);
+
+/* this sets the box sizing for all the box elements */
+*, * ::before, *::after {
+
+    box-sizing: border-box;
+
 }
 
-.container {
+
+:root {
     background-color: #EE7441;
+}
+
+
+/* Lets control the container */
+.container {
+    display: flex;
+    flex: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: 80rem;
+    margin: 0, auto;
+    padding: 100px;
+}
+
+
+/* controlling the question box */
+#question-container {
+    width: 100vw;
+    height: 50vh;
+    /* give it some room */
+    padding: 80px;
+    margin: 25px;
+    /* go big flexing */
+    display: flex;
+    /* align-content:space-between; */
+    /* justify-content: space-around; */
+    align-items: center;
+    
+    /* off white for contrast */
+    background-color: #F5F5F5;
+    /* make it curvy */
+    border-radius: 20px;
+    /* give this some shadowing to give a bubble feel */
+    box-shadow: 0 0 10px 5px;
+}
+
+
+/* control how the btns are displayed with flexbox */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    align-self: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0;
+    flex-grow: 4;
+
+    
+     
+}
+
+#question {
+    text-align: left;
+    align-self: start;
+    flex-shrink: 8;
+
+}
+
+#naruto {
+    position: relative;
+}
+
+
+.btn {
+    border-radius: 5px;
+}
+
+.btn:hover {
+    border-color: #EE7441 ;
+}
+
+.timer {
+    margin: 0px;
+}
+
+/* .scorebtn {
+    position: absolute;
+    padding: 5px;
+    top: 5%
+     
+} */
+
+.playbtn, .nextbtn {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hide {
+    display: none;
 }
