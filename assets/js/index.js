@@ -38,10 +38,13 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct
         }
         button.addEventListener('click', selectAnswer)
-        answersEl.appendChild(button)
+        answersEL.appendChild(button)
     })
 }
 
+function resetState() {
+  
+}
 
 
 function selectAnswer(e) {
