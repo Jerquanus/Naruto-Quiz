@@ -61,7 +61,7 @@
      
 }
 
-#question {
+#question-box {
     text-align: left;
     align-self: start;
     flex-shrink: 8;
@@ -92,7 +92,13 @@
      
 } */
 
-.playbtn, .nextbtn {
+.playbtn {
+    font-size: 80px;
+    font-weight: bold;
+    width: 600px;
+}
+
+.nextbtn {
     font-size: 30px;
     font-weight: bold;
 }

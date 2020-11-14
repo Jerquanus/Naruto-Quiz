@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./assets/css/style.css">
+
     <title> Naruto Shinobi Quiz</title>
   </head>
   
@@ -30,12 +31,12 @@
         </div>
 
         <!-- 'asking all those questions..assuming' ask them questions -->
-        <div id= "question" class= "ask hide">
-          Could you be the next Kage? Test your knowledge - follow your ninja way, <span>click play!!</span>
+        <div id= "question-box" class= "hide">
+          Could you be the next Kage? Test your knowledge - follow your ninja way, <span>click next!!</span>
         </div>
 
         <!-- 'u ain't got the answers sway' give them answer choices and create a grid to hold them-->
-        <div id= "answers" class= "btn-grid hide">
+        <div id= "answer-choice" class= "btn-grid hide">
 
           <button class="btn"> choice 1</button>
           <button class="btn"> choice 2</button>
@@ -46,8 +47,8 @@
 
         <div class="controls">
             
-          <button id="playbtn" class="playbtn start-time btn button">Play!</button>
-          <button id="nextbtn" class="nextbtn button btn hide">Next</button>
+          <button id="play-btn" class="playbtn start-time btn button">Play!</button>
+          <button id="next-btn" class="nextbtn button btn hide">Next</button>
           
         </div>
 
@@ -67,3 +68,5 @@
 
 
   </body>
+
+  <script src="./assets/js/index.js"></script>
