@@ -1,42 +1,55 @@
 
 // var to call 'play-btn'
-const playbutton = document.getElementById('play-btn')
-const questionEL = document.getElementById('question-box')
-const answersEL = document.getElementById('answer-choice')
+var playbutton = document.getElementById('play-btn')
+var nextbutton = document.getElementById('next-btn')
+var questionsContainer = document.getElementById('kaguya')
+var questionEL = document.getElementById('question-box')
+var answersEL = document.getElementById('answer-choice')
 
-let shuffledQuestions, currentQuestionIndex
+var shuffledQuestions, currentQuestionIndex
 
 
-// adding event to start game
+// add event to start game
 playbutton.addEventListener('click', playGame)
 
 // function to start the game, hide the play button, then show the question & choices also start timer.
 function playGame() {
+    // hides play button after pressing
     playbutton.classList.add('hide');
-    // sets a way to shuffle questions
+    // set a way to shuffle questions. randomizes array
     shuffledQuestions = choices.sort(() => Math.random() - .5)
-    currentQuestionIndex = 1
-    answersEL.classList.remove('hide');
-    questionEL.classList.remove('hide');
-    nextquestion()
-    
-
+    currentQuestionIndex = 0
+    // reveal questions
+    questionsContainer.classList.remove('hide')
+    setNextQuestion()
 }
 
-function nextquestion() {
+function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
-
 }
 
 function showQuestion(question) {
-    questionEL.innertext = question.question
+    questionEL.innerText = question.question
+    question.answers.forEach(answer =>{
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answersEl.appendChild(button)
+    })
 }
 
-function selectAnswer() {
 
+
+function selectAnswer(e) {
+    
 }
 
-const choices = [
+// array of questions
+var choices = [
     {
         question: 'Who was the first Hokage?',
         answers: [
